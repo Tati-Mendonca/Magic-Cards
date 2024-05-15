@@ -11,7 +11,7 @@ import { NavbarComponent } from './_components/navbar/navbar.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'magic';
+  title = 'magic-cards-api';
 
 }
 
