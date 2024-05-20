@@ -1,30 +1,16 @@
-<div class="card-deck">
-    <div class="card">
-        <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Este é um card mais longo com suporte a texto embaixo, que funciona como uma introdução
-                a um conteúdo adicional. Este conteúdo é um pouco maior.</p>
-            <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
+<div class="container mt-3">
+    <div class="row d-flex justify-content-center">
+        @for (card of cards; track card.id) {
+        @if (card.imageUrl != undefined) {
+        <div class="card col-3 m-1 ">
+            <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
+            <ul class="card-body">
+                <li class="card-text"><span>Nome: </span>{{ card.name }}</li>
+                <li class="card-text"><span>Bloco: </span>{{ card.setName }}</li>
+                <li class="card-text"><span>Data de lançamento: </span>00/00</li>
+            </ul>
         </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Este é um card com suporte a texto embaixo, que funciona como uma introdução a um
-                conteúdo adicional.</p>
-            <p class="card-text"><small class="text-muted">Atualizados 3 minutos atrás</small></p>
-        </div>
-    </div>
-    <div class="card">
-        <img class="card-img-top" src=".../100px200/" alt="Imagem de capa do card">
-        <div class="card-body">
-            <h5 class="card-title">Título do card</h5>
-            <p class="card-text">Este é um card maior com suporte a texto embaixo, que funciona como uma introdução a um
-                conteúdo adicional. Este card tem o conteúdo ainda maior que o primeiro, para mostrar a altura igual, em
-                ação.</p>
-
-        </div>
+        }
+        }
     </div>
 </div>

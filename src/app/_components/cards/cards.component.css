@@ -1,0 +1,16 @@
+img {
+    width: 150px;
+}
+
+li span {
+    font-weight: 700;
+}
+
+.card-text {
+    font-size: 0.7rem;
+}
+
+.card {
+    width: 13rem;
+    height: 18rem;
+}
