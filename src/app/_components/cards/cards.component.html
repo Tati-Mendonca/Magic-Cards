@@ -1,4 +1,28 @@
-<div class="container mt-3">
+<div class=" container pb-4">
+    <h1>Cards</h1>
+    <div class="container mt-3">
+        <div class="row d-flex justify-content-center">
+            @for (card of cards; track card.id) {
+            @if (card.imageUrl != undefined) {
+            <div class="card col-3 m-1 ">
+                <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
+                <ul class="card-body">
+                    <li class="card-text"><span>Name: </span>{{ card.name }}</li>
+                    <li class="card-text"><span>Type: </span>{{ card.types }}</li>
+                    <li class="card-text"><span>Rarity: </span>{{ card.rarity }}</li>
+
+                </ul>
+            </div>
+            }
+            }
+        </div>
+    </div>
+
+    <app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+        (pageChanged)="onPageChange($event)"></app-pagination>
+</div>
+
+<!-- <div class="container mt-3">
     <div class="row d-flex justify-content-center">
         @for (card of cards; track card.id) {
         @if (card.imageUrl != undefined) {
@@ -6,11 +30,15 @@
             <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
             <ul class="card-body">
                 <li class="card-text"><span>Nome: </span>{{ card.name }}</li>
-                <li class="card-text"><span>Bloco: </span>{{ card.setName }}</li>
-                <li class="card-text"><span>Data de lançamento: </span>00/00</li>
-            </ul>
+                <li class="card-text"><span>Tipo: </span>{{ card.types }}</li>
+                <!-- @for (ruling of rulings; track $index) {
+                <li class="card-text"><span>Data de lançamento: </span>Object.values({{ card.rulings }})</li> //preciso
+                percorrer um array
+                } -->
+<!-- <li class="card-text"><span>Data de lançamento: </span>Object.values({{ card.rulings }})</li> -->
+<!-- </ul>
         </div>
         }
         }
     </div>
-</div>
+</div>  -->

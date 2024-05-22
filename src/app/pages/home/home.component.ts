@@ -4,39 +4,23 @@ import { FooterComponent } from '../../_components/footer/footer.component';
 import { ButtonComponent } from '../../_components/button/button.component';
 import { CardsComponent } from '../../_components/cards/cards.component';
 import { DecComponent } from '../../_components/dec/dec.component';
-import { CardService } from '../../services/card.service';
-import { CardDetail } from '../../interfaces/magic.interface';
+import { PaginationComponent } from '../../_components/pagination/pagination.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
-  imports: [
-    NavbarComponent,
-    FooterComponent,
-    ButtonComponent,
-    CardsComponent,
-    DecComponent,
-  ],
+    selector: 'app-home',
+    standalone: true,
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    imports: [
+        NavbarComponent,
+        FooterComponent,
+        ButtonComponent,
+        CardsComponent,
+        DecComponent,
+        PaginationComponent
+    ]
 })
-export class HomeComponent implements OnInit {
-  private cardService = inject(CardService);
-  cards: CardDetail[] = [];
+export class HomeComponent  {
 
-
-  ngOnInit(): void {
-    this.loadCards();
-  }
-
-  loadCards() {
-    this.cardService.getCards().subscribe({
-      next: (response: any) => {
-        //  console.log(response.cards)
-        this.cards = response.cards as CardDetail[];
-      },
-      error: (error) => console.log('Erro ao carregar cards:', error),
-    });
-  }
 }
 
