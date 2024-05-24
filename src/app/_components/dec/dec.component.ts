@@ -1,63 +1,44 @@
-import { Component } from '@angular/core';
-import { PaginationService } from '../../services/pagination.service';
-import { PaginationComponent } from '../pagination/pagination.component';
-import { CardDetail } from '../../interfaces/magic.interface';
+import { Component, Input } from "@angular/core";
+import { SearchService } from "../../services/search.service";
+import { PaginationComponent } from "../pagination/pagination.component";
+import { NavbarComponent } from "../navbar/navbar.component";
+
 
 @Component({
-    selector: 'app-dec',
+    selector: "app-dec",
     standalone: true,
-    templateUrl: './dec.component.html',
-    styleUrl: './dec.component.css',
-    imports: [ PaginationComponent]
+    templateUrl: "./dec.component.html",
+    styleUrl: "./dec.component.css",
+    imports: [PaginationComponent],
 })
 export class DecComponent {
-    paginatedCards!: any[];
-    currentPage: number = 1;
-    itemsPerPage: number = 100;
-    totalItems: number = 9500;
-    totalPages: number = 937;
-    cards: any = [];
+    // @Input() navbarComponent!: NavbarComponent; 
+    // @Input() searchService!: SearchService; 
 
-    constructor(private paginationService: PaginationService){    }
+//aqui altero os dados que recebo via input Search    
+    block: string = " ";
+    name: string = " ";
+
+    constructor(private searchService: SearchService) {}
 
     ngOnInit(): void {
-        this.loadPagination();
-      }
+        this.loadDec();
+    }
 
-    loadPagination() {
-        this.paginationService.getPaginatedData(this.currentPage).subscribe({
-          next: (response: any) => {
-            //  console.log(response.cards)
-            this.cards = response.cards as CardDetail[];
-          },
-          error: (error) => console.log('Erro ao carregar cards:', error),
-        });
-      }
-
-    onPageChange(page: number): void {
-        this.currentPage = page;
-        this.loadPagination();
-      }
-
-      goToPreviousPage(): void {
-        if (this.currentPage > 1) {
-          this.currentPage--;
-          this.loadPagination();
-        }
-      }
-    
-      goToNextPage(): void {
-        if (this.currentPage < this.totalPages) {
-          this.currentPage++;
-          this.loadPagination();
-        }
-      }
-    
-      goToPage(page: string): void {
-        const pageNumber = parseInt(page, 10);
-        if (pageNumber && pageNumber >= 1 && pageNumber <= this.totalPages && pageNumber !== this.currentPage) {
-          this.currentPage = pageNumber;
-          this.loadPagination();
-        }
-      }
+    loadDec() {
+        this.searchService.getCardsSelected(this.block, this.name)
+        .subscribe({
+            next: (response: any) =>{
+                console.log(response);
+                
+            }
+        } )
+    }
+    //{
+    //     this.searchService
+    //         .getCardsSelected(this.block, this.name)
+    //         .subscribe((data) => {
+    //             console.log(data);
+    //         });
+    // }
 }
