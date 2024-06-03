@@ -1,9 +1,6 @@
-<app-navbar></app-navbar>
+<app-navbar (dataSerchEvent)="loadDec($event)"></app-navbar>
 <section class="results">
-
-  <!-- <app-dec [searchService]="searchService"></app-dec> -->
-  <app-dec></app-dec>
-
+  <app-dec [sets]="sets"></app-dec>
 </section>
 <app-cards></app-cards>
 <app-footer></app-footer>

@@ -1,36 +1,47 @@
-import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { FormsModule } from "@angular/forms"
+import { Component, Output, output, EventEmitter } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [ReactiveFormsModule, FormsModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
 })
-
 export class NavbarComponent {
+  blocks = [
+    { name: 'Amonkhet', abbrev: 'AMO' },
+    { name: 'Ixalan', abbrev: 'IXA' },
+    { name: 'Zendikar', abbrev: 'ZEN' },
+    { name: 'Ravnica', abbrev: 'RAV' },
+    { name: 'Onslaught', abbrev: 'ONS' },
+  ];
 
+  @Output() dataSerchEvent = new EventEmitter<{
+    name: string;
+    block: string;
+  }>();
 
-    blocks = [
-        {name: 'Amonkhet', abbrev: 'AMO'},
-        {name: 'Ixalan', abbrev: 'IXA'},
-        {name: 'Zendikar', abbrev: 'ZEN'},
-        {name: 'Ravnica', abbrev: 'RAV'},
-        {name: 'Onslaught', abbrev: 'ONS'},
-      ];
+  name = '';
+  block = '';
+  testInput: string = '';
 
-    
-    onSearch(event: any){
-        const name = event.target.value;
-        console.log(name);
-    }
+  onValueChange(event: any) {
+    const name = event.target.value;
+    this.name = name;
+  }
 
-    onSelect(event: any){
-      
-        const block = event.target.value
-        console.log(block);
-    }
+  onSearch() {
+    this.dataSerchEvent.emit({ name: this.name, block: this.block });
+  }
 
+  onSelect(event: any) {
+    const block = event.target.value;
+    this.block = block;
+  }
+
+  // onValidate(event: string) {
+  //     console.log(event);
+  // }
 }

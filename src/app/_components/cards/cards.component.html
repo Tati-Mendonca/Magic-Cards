@@ -1,25 +1,59 @@
-<div class=" container pb-4">
-    <h1>Cards</h1>
-    <div class="container mt-3">
-        <div class="row d-flex justify-content-center">
-            @for (card of cards; track card.id) {
-            @if (card.imageUrl != undefined) {
-            <div class="card col-3 m-1 ">
-                <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
-                <ul class="card-body">
-                    <li class="card-text"><span>Name: </span>{{ card.name }}</li>
-                    <li class="card-text"><span>Type: </span>{{ card.types }}</li>
-                    <li class="card-text"><span>Rarity: </span>{{ card.rarity }}</li>
+<div class="container pb-4">
+  <h1>All Cards</h1>
 
-                </ul>
-            </div>
-            }
-            }
+  <main class="row d-flex justify-content-center align-self-center">
+    @for (card of cards; track card.id) { @if (card.imageUrl != undefined) {
+
+    <aside class="card col-3 m-1 d-inline-flex">
+      <div class="d-flex">
+        <div class="img-card">
+          <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block py-3" />
         </div>
-    </div>
 
-    <app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
-        (pageChanged)="onPageChange($event)"></app-pagination>
+        <div class="content-card">
+          <ul class="card-body">
+            <li class="card-text"><span>Name: </span>{{ card.name }}</li>
+            <li class="card-text">
+              <span>ManaCost: </span>{{ card.manaCost }}
+            </li>
+            <li class="card-text">
+              <span>Color: </span>{{ card.colorIdentity }}
+            </li>
+            <li class="card-text long-text"><span>Text: </span>{{ card.text }}</li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    } }
+  </main>
+
+  <!--
+  <div class=" container pb-4">
+    <h1>All Cards</h1>
+    <div class="container mt-3">
+      <div class="row d-flex justify-content-center">
+        @for (card of cards; track card.id) {
+        @if (card.imageUrl != undefined) {
+
+        <div class="card col-3 m-1">
+          <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block pt-3">
+          <aside>
+            <ul class="card-body">
+              <li class="card-text"><span>Name: </span>{{ card.name }}</li>
+              <li class="card-text"><span>ManaCost: </span>{{ card.manaCost }}</li>
+              <li class="card-text"><span>Color: </span>{{ card.colorIdentity }}</li>
+              <li class="card-text"><span>Text: </span>{{ card.text }}</li>
+            </ul>
+          </aside>
+
+        </div>
+        }
+        }
+      </div>
+    </div> -->
+
+  <app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
+    (pageChanged)="onPageChange($event)"></app-pagination>
 </div>
 
 <!-- <div class="container mt-3">

@@ -1,31 +1,16 @@
 <div class=" container pb-4">
-    <h1>All Cards filtrados</h1>
-    <!-- <p>Name: {{ searchService.name }}</p>
-    <p>Block: {{ searchService.block }}</p> -->
+  <div class="container mt-3">
+    <div class="row d-flex justify-content-center">
+      @for (set of sets; track set.name) {
+      <div class="card col-3 m-1 ">
+        <ul class="card-body">
+          <li class="card-text"><span>Name: </span>{{ set.name }}</li>
+          <li class="card-text"><span>Block: </span>{{ set.block }}</li>
+          <li class="card-text"><span>Date: </span>{{ set.releaseDate }}</li>
+        </ul>
+      </div>
+      }
 
-    <!-- <p>Name: {{ navbarComponent.name }}</p>
-    <p>Block: {{ navbarComponent.block }}</p> -->
-
-
-    <!-- <app-cards></app-cards> -->
-
-    <!-- <div class="container mt-3">
-        <div class="row d-flex justify-content-center">
-            @for (card of cards; track card.id) {
-            @if (card.imageUrl != undefined) {
-            <div class="card col-3 m-1 ">
-                <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
-                <ul class="card-body">
-                    <li class="card-text"><span>Nome: </span>{{ card.name }}</li>
-                    <li class="card-text"><span>Tipo: </span>{{ card.types }}</li>
-
-                </ul>
-            </div>
-            }
-            }
-        </div>
-    </div> -->
-
-    <!-- <app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
-        (pageChanged)="onPageChange($event)"></app-pagination> -->
+    </div>
+  </div>
 </div>

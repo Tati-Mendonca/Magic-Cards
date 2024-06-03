@@ -27,7 +27,7 @@ export class CardsComponent {
     loadPagination() {
         this.paginationService.getPaginatedData(this.currentPage).subscribe({
             next: (response: any) => {
-                //  console.log(response.cards)
+               //  console.log(response.cards)
                 this.cards = response.cards as CardDetail[];
             },
             error: (error) => console.log("The requested resource was not found.", error),

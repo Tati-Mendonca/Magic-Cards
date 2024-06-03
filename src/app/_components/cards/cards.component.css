@@ -1,16 +1,25 @@
-img {
-    width: 150px;
+.img-card {
+  /* border: solid black 2px; */
+}
+
+.content-card {
+  /* border: solid rebeccapurple 2px; */
+  width: 20rem;
 }
 
 li span {
-    font-weight: 700;
+  font-weight: 600;
 }
 
 .card-text {
-    font-size: 0.7rem;
+  font-size: 0.6rem;
+}
+
+.long-text {
+  font-size: 0.55rem;
 }
 
 .card {
-    width: 13rem;
-    height: 18rem;
+  /* width: 13rem;
+  height: 24rem; */
 }
