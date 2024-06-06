@@ -1,7 +1,10 @@
 .footer {
-    background-color: var(--bs-dark)
+  background-color: var(--bs-dark);
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .by {
-    color: var(--bs-gray-600);
+  color: var(--bs-gray-600);
 }

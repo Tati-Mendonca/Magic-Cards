@@ -1,0 +1,17 @@
+.card {
+  cursor: pointer;
+  margin-top: 3rem;
+  height: 8rem;
+  font-size: 0.9em;
+  overflow: auto;
+}
+
+.card-date {
+  text-align: center;
+  width: 43%;
+  border: solid 1px;
+  border-radius: 5px;
+  margin-top: 1rem;
+  margin-bottom: -13px;
+  float: right;
+}

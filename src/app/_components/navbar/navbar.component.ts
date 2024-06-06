@@ -41,7 +41,7 @@ export class NavbarComponent {
     this.block = block;
   }
 
-  // onValidate(event: string) {
-  //     console.log(event);
-  // }
+  allCards(){
+    window.location.reload()
+  }
 }

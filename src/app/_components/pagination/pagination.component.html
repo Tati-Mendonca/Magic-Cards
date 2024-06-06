@@ -1,16 +1,14 @@
 <nav aria-label="pagination">
-    <ul class="pagination justify-content-center m-2">
-        <li class="page-item">
-            <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1"
-                class="page-link">&laquo;</button>
-        </li>
-        <li class="page-item">
-            <p class="page-link"> {{ currentPage }} </p>
-        </li>
-
-        <li class="page-item">
-            <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="page-link"
-                href="#">&raquo;</button>
-        </li>
-    </ul>
+  <ul class="pagination justify-content-center m-2">
+    <li class="page-item">
+      <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1" class="page-link">&laquo;</button>
+    </li>
+    <li class="page-item">
+      <p class="page-link"> {{ currentPage }} </p>
+    </li>
+    <li class="page-item">
+      <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages" class="page-link"
+        href="#">&raquo;</button>
+    </li>
+  </ul>
 </nav>

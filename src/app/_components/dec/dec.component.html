@@ -1,16 +1,15 @@
-<div class=" container pb-4">
-  <div class="container mt-3">
-    <div class="row d-flex justify-content-center">
-      @for (set of sets; track set.name) {
-      <div class="card col-3 m-1 ">
-        <ul class="card-body">
-          <li class="card-text"><span>Name: </span>{{ set.name }}</li>
-          <li class="card-text"><span>Block: </span>{{ set.block }}</li>
-          <li class="card-text"><span>Date: </span>{{ set.releaseDate }}</li>
-        </ul>
-      </div>
-      }
-
+<div class="container mt-3 d-flex align-items-center">
+  <div class="row d-flex justify-content-center ">
+    @for (set of sets; track $index) {
+    <!-- <div (click)="showBooster(set)" class="card col-3 m-1"> -->
+    <div (click)="showBooster()" class="card col-3 m-1">
+      <ul class="card-body">
+        <li class="card-text">{{ set.name }}</li>
+        <li class="card-text">{{ set.block }}</li>
+        <li class="card-text">{{ set.booster }}</li>
+        <li class="card-date">{{ set.releaseDate }}</li>
+      </ul>
     </div>
+    }
   </div>
 </div>

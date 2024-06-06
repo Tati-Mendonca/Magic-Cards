@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg mb-auto px-3">
   <section class="container-fluid">
-    <a class="navbar-brand text-light" href="#">Magic Cards</a>
+    <a class="navbar-brand text-light" href="#" (click)="allCards()">Magic Cards</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,8 +9,8 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
 
       <form class="d-flex" role="search">
-        <input type="search" placeholder="Name" (change)="onValueChange($event)" class="me-2 p-1" />
-        <select class="dropdown me-2" aria-label="Default select example" (change)="onSelect($event)">
+        <input type="search" placeholder="Name" (change)="onValueChange($event)" class="search me-2 px-2" />
+        <select class="dropdown me-2 px-2" aria-label="Default select example" (change)="onSelect($event)">
           <option selected disabled>Block</option>
           <option value="Amonkhet">Amonkhet</option>
           <option value="Ixalan">Ixalan</option>

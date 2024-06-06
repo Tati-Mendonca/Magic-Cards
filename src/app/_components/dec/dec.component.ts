@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-dec',
@@ -8,5 +9,11 @@ import { Component, Input } from '@angular/core';
   imports: [],
 })
 export class DecComponent {
+
   @Input() sets: any = [];
+  @Input() loading!: boolean;
+
+  showBooster(): void{
+  this.loading = true;
+  }
 }

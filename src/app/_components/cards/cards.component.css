@@ -1,9 +1,9 @@
-.img-card {
-  /* border: solid black 2px; */
+.container {
+  position: relative;
+  padding-bottom: 10px;
 }
 
 .content-card {
-  /* border: solid rebeccapurple 2px; */
   width: 20rem;
 }
 
@@ -19,7 +19,15 @@ li span {
   font-size: 0.55rem;
 }
 
-.card {
-  /* width: 13rem;
-  height: 24rem; */
+.back-to-top {
+  background: #fff;
+  border: solid 1px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  right: 3rem;
+  bottom: 4rem;
+  color: var(--bg-black);
+  transition: 0.3s;
+  transform: translateY(100%);
 }

@@ -1,5 +1,6 @@
 <div class="container pb-4">
   <h1>All Cards</h1>
+  <a class="back-to-top px-2" (click)="scrollToTop()" [hidden]="!visible">Top</a>
 
   <main class="row d-flex justify-content-center align-self-center">
     @for (card of cards; track card.id) { @if (card.imageUrl != undefined) {
@@ -27,52 +28,6 @@
     } }
   </main>
 
-  <!--
-  <div class=" container pb-4">
-    <h1>All Cards</h1>
-    <div class="container mt-3">
-      <div class="row d-flex justify-content-center">
-        @for (card of cards; track card.id) {
-        @if (card.imageUrl != undefined) {
-
-        <div class="card col-3 m-1">
-          <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block pt-3">
-          <aside>
-            <ul class="card-body">
-              <li class="card-text"><span>Name: </span>{{ card.name }}</li>
-              <li class="card-text"><span>ManaCost: </span>{{ card.manaCost }}</li>
-              <li class="card-text"><span>Color: </span>{{ card.colorIdentity }}</li>
-              <li class="card-text"><span>Text: </span>{{ card.text }}</li>
-            </ul>
-          </aside>
-
-        </div>
-        }
-        }
-      </div>
-    </div> -->
-
   <app-pagination [currentPage]="currentPage" [itemsPerPage]="itemsPerPage" [totalItems]="totalItems"
     (pageChanged)="onPageChange($event)"></app-pagination>
 </div>
-
-<!-- <div class="container mt-3">
-    <div class="row d-flex justify-content-center">
-        @for (card of cards; track card.id) {
-        @if (card.imageUrl != undefined) {
-        <div class="card col-3 m-1 ">
-            <img [src]="card.imageUrl" alt="{{ card.name }}" class="img-fluid rounded mx-auto d-block p-3">
-            <ul class="card-body">
-                <li class="card-text"><span>Nome: </span>{{ card.name }}</li>
-                <li class="card-text"><span>Tipo: </span>{{ card.types }}</li>
-                <!-- @for (ruling of rulings; track $index) {
-                <li class="card-text"><span>Data de lançamento: </span>Object.values({{ card.rulings }})</li> //preciso
-                percorrer um array
-                } -->
-<!-- <li class="card-text"><span>Data de lançamento: </span>Object.values({{ card.rulings }})</li> -->
-<!-- </ul>
-        </div>
-        }
-        }
-    </div>
-</div>  -->
