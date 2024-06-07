@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg mb-auto px-3">
+<nav class="navbar navbar-expand-md mb-auto px-3">
   <section class="container-fluid">
     <a class="navbar-brand text-light" href="#" (click)="allCards()">Magic Cards</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -7,8 +7,7 @@
     </button>
     <section class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-
-      <form class="d-flex" role="search">
+      <form class="d-flex justify-content-center" role="search">
         <input type="search" placeholder="Name" (change)="onValueChange($event)" class="search me-2 px-2" />
         <select class="dropdown me-2 px-2" aria-label="Default select example" (change)="onSelect($event)">
           <option selected disabled>Block</option>

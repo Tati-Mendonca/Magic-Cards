@@ -12,7 +12,7 @@ li span {
 }
 
 .card-text {
-  font-size: 0.6rem;
+  font-size: 0.7em;
 }
 
 .long-text {
@@ -30,4 +30,20 @@ li span {
   color: var(--bg-black);
   transition: 0.3s;
   transform: translateY(100%);
+}
+
+@media (max-width: 1024px) {
+  .card-text {
+    font-size: 0.8em;
+  }
+
+  .container {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-text {
+    font-size: 1em;
+  }
 }
