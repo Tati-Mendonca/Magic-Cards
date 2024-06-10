@@ -1,27 +1,47 @@
-# Angular17
+# Sobre o projeto
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+A proposta desse projeto consiste em desenvolver um fluxo automatizado para abrir pacotes de cartas de Magic: The Gathering utilizando a API https://docs.magicthegathering.io/
 
-## Development server
+## Objetivo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O objetivo deste projeto foi construir um aplicativo... Nele o usuário pode visualizar todas as cartas do jogo, pesquisar por uma carta especifica, filtrar por coleções ou selecionar um pacote.  O projeto todo foi desenvolvido utilizando Angular 17.
 
-## Code scaffolding
+## Protótipo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<a href="https://ibb.co/QcLr6WJ"><img src="https://i.ibb.co/1n189C0/magic1.png" alt="magic1" width="600"></a>
+<a href="https://ibb.co/RNhKW1p"><img src="https://i.ibb.co/yphCJDn/magic2.png" alt="magic2" width="600"></a>
+<a href="https://ibb.co/HrcK8Fp"><img src="https://i.ibb.co/dQNfYWJ/magic3.png" alt="magic3" width="600"></a>
+<a href="https://ibb.co/MGHF4dH"><img src="https://i.ibb.co/mXKfwpK/magic5.png" alt="magic5" width="600"></a>
 
-## Build
+## Projeto
+Visualize o projeto completo aqui: [(test-feedz.vercel.app)](https://test-feedz.vercel.app/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+<a href="https://ibb.co/RgBKdX1"><img src="https://i.ibb.co/S6dgGk2/magic4.png" alt="magic4" border="0"></a>
 
-## Running unit tests
+## Tecnologias utilizadas
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- HTML
+- CSS
+- JavaScript
+- Typescript
+- Node.js
+- Git e GitHub
+- Bootstrap
+- Angular
 
-## Running end-to-end tests
+## Como usar
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Você precisará usar o Node.js
 
-## Further help
+Clonar o projeto
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+ $ git clone https://github.com/Tati-Mendonca/Magic-Cards.git
+
+Instalar as dependências do projeto
+
+ $ npm install or yarn
+
+Iniciar a aplicação
+
+ $ npm start or yarn start
+
