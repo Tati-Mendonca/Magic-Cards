@@ -1,3 +1,4 @@
+
 # Sobre o projeto
 
 A proposta desse projeto consiste em desenvolver um fluxo automatizado para abrir pacotes de cartas de Magic: The Gathering utilizando a API https://docs.magicthegathering.io/
@@ -16,7 +17,7 @@ O objetivo deste projeto foi construir um aplicativo... Nele o usuário pode vis
 ## Projeto
 Visualize o projeto completo aqui: [(test-feedz.vercel.app)](https://test-feedz.vercel.app/)
 
-<a href="https://ibb.co/RgBKdX1"><img src="https://i.ibb.co/S6dgGk2/magic4.png" alt="magic4" border="0"></a>
+![magic-gif2](https://github.com/Tati-Mendonca/Magic-Cards/assets/97405991/c45d1588-c32a-479f-9a9c-4e365391e497)
 
 ## Tecnologias utilizadas
 
