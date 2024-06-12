@@ -5,7 +5,7 @@ A proposta desse projeto consiste em desenvolver um fluxo automatizado para abri
 
 ## Objetivo
 
-O objetivo deste projeto foi construir um aplicativo... Nele o usuário pode visualizar todas as cartas do jogo, pesquisar por uma carta especifica, filtrar por coleções ou selecionar um pacote.  O projeto todo foi desenvolvido utilizando Angular 17.
+O objetivo deste projeto foi construir um aplicativo de fácil utilização e bastante intuitivo onde o usuário pode visualizar todas as cartas do jogo, pesquisar por uma carta especifica, filtrar por coleções e ainda selecionar um pacote. O projeto todo foi desenvolvido utilizando Angular 17.
 
 ## Protótipo
 
